@@ -1,0 +1,16 @@
+{% for player in game.players %}
+<div class="player">
+    <p>
+        <h3>{{ player.name }}</h3>
+        choice: {{ player.choice }} 
+    </p>
+</div> 
+{% endfor %}
+
+ 
+{% if result is none %}
+ We have a Draw!
+{% else %}
+    We have a Winner: {{ result.name }}!
+{% endif %}
+
